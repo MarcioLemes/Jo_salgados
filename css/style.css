@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Righteous&display=swap');
+
+*{              /*zerando a pagina   */
+	margin: 0px;      /* (borda externa)  */
+	padding: 0px;       /* (borda interna)  */
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+   font-size: 100%;
+   background: solid #FF3300;
+   background-image: -ms-linear-gradient(top, #EEFF00 0%, #FF3300 100%);
+   background-image: -moz-linear-gradient(top, #EEFF00 0%, #FF3300 100%);
+   background-image: -o-linear-gradient(top, #EEFF00 0%, #FF3300 100%);
+   background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #EEFF00), color-stop(1, #EEFF00));
+   background-image: -webkit-linear-gradient(top, #EEFF00 0%, #FF3300 100%);
+   background-image: linear-gradient(to bottom, #EEFF00 0%, #FF3300 100%);       /* esse é o que sta funcinando */
+   /* conforme sugerido pelo @PapaCharlie, seguem soluções pra IE mais velho:
+   /*IE7-*/ filter: progid:DXImageTransform.Microsoft.Gradient(
+      startColorStr='#EEFF00', endColorStr='#FF3300', GradientType=0);
+   /*IE8+*/ -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#EEFF00', endColorStr='#FF3300', GradientType=0)";
+}
+
+
+
+.cabecalho{            /* propriedades para o PAI */
+    display: flex;     /* iniciando o flex box */
+    flex-direction: row;  /* modo linha */
+    align-items: center;  /* alinha tudo no centro */
+    justify-content: space-around; /* justificado no centro*/
+    padding: 10px;   /* (se colocar so um numero (24px) ele aplica nas quatro direcoes ou (24px, 0px) Baixa um pouquinho os elementos para nao ficar muito em cima da pagina  */
+
+}
+
+
+.conteudo-imagem-cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+
+.cabecalho-menu{
+    display: flex;
+    gap: 50px; /* afasta um pouco os itens do menu */
+}
+
+.cabecalho-menu-item{
+    font-family: 'Sarala', sans-serif;
+    color: #FF3300;
+    font-weight: 400; /* quanto maior, mais em negrito */
+    font-size: 18px; /* tamanho da fonte */
+}
+
+.conteudo{
+    margin-bottom: 48px; /* para dar um espacamento no final do texto e o rodape */
+    border-top: 0.4px solid #FF3300;    /*  cria linha divisoria  */
+}
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 48px;  /* cria um espacamento do topo (margem artificial) */ 
+}
+
+
+.conteudo-imagem-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.conteudo-imagem-principal-1{
+    height: 600px;
+    width: 950px;
+    margin-top: 48px;   /* cria um espacamento do topo (margem artificial) */
+    border-radius: 10px;
+    
+}
+
+
+
+.conteudo-terceario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;          /* cria um espacamento entre os elementos */
+    margin-top: 48px;  /* cria um espacamento do topo (margem artificial) */
+}
+
+.conteudo-terceario-titulo{
+    border-top: 0.4px solid #FF3300;   /* cria uma LINHA para separar os elementos */
+   
+    padding-top: 48px;  /* afasta um pouco a linha dos elementos */
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 34px;
+    color: #FF3300;
+    margin-bottom: 16px;  /* cria um espacamento entre os elementos */
+    text-shadow: 0 1px 3px rgb(0, 0, 0, 0.7);
+
+}
+
+
+.conteudo-terceario-fotos{
+    display: flex;
+    flex-direction: row;
+    gap: 84px;  
+    overflow: hidden; /* evita que a imagem vaze para fora da div ao aplicar o zoom. */ 
+}
+
+.conteudo-terceario-fotos-1{
+    height: 250px; 
+    height: 300px;
+    border: 3px solid rgb(243, 247, 5); 
+    border-radius: 10px;  
+
+    /* object-fit: contain; */     /* Tres opcoes de visualizacao */ 
+    /* object-fit: cover; */
+    /* object-fit: fill; */
+
+
+}
+
+
+
+.conteudo-terceario-texto{
+    font-family: 'Times';
+    color: #D2691E;
+
+}
+
+.conteudo-quarternario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;    /* cria um espacamento entre os elementos */
+    margin-top: 48px;  /* cria um espacamento do topo (margem artificial) */
+}
+
+.conteudo-quarternario-titulo{
+    border-top: 0.4px solid #EEFF00;     /* cria uma LINHA para separar os elementos */
+   
+    padding-top: 48px;                   /* afasta um pouco a linha dos elementos */
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 34px;
+    color: #EEFF00;
+    margin-bottom: 16px;                /* cria um espacamento entre os elementos */
+    text-shadow: 0 1px 3px rgb(0, 0, 0, 0.7);
+}
+
+
+.rodape{
+    border-top: 0.4px solid #EEFF00;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    padding: 32px;  /* afasta um pouco o elemento */
+    justify-content: center;    
+}
+
+
+.rodape-escrito{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;  /* Peso da fonte (negrito)*/
+    font-size: 19px;
+    color: #EEFF00;
+    text-align: center;
+}
+
+.rodape-escrito-texto{
+    font-family: Arial;
+    color: #EEFF00;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media(max-width: 1200px){
+    .conteudo-imagem-principal-1{
+    height: 800px;
+    margin-top: 48px;   /* cria um espacamento do topo (margem artificial) */
+    }
+  
+}
+
+@media(max-width: 1024px){
+
+    .conteudo-imagem-principal-1{
+    height: 500px;
+    margin-top: 48px;   /* cria um espacamento do topo (margem artificial) */
+    }
+    .conteudo-secundario-fotos{
+    display: flex;
+    flex-direction: row;
+    gap: 54px; 
+    }
+
+.conteudo-secundario-fotos-1{
+    height: 200px;
+    }
+
+
+}
+
+@media(max-width: 768px){
+     .conteudo-imagem-principal-1{
+    height: 300px;
+    margin-top: 48px;   /* cria um espacamento do topo (margem artificial) */
+    }
+  
+    .conteudo-secundario-fotos{
+    display: flex;
+    flex-direction: column;
+    gap: 54px; 
+    }
+
+    .conteudo-secundario-fotos-1{
+        height: 150px;
+    }
+
+
+
+    .conteudo-terceario-fotos{
+          display: flex;
+          flex-direction: column;
+          gap: 84px;  
+    }
+
+    .conteudo-terceario-fotos-1{
+        height: 200px;    
+    }
+
+}
+
+@media(max-width: 425px){
+    .conteudo-imagem-principal-1{
+        height: 150px;
+   
+    }
+  
+    .conteudo-secundario-fotos{
+        display: flex;
+        flex-direction: column;
+        gap: 54px; 
+    }
+
+    .conteudo-secundario-fotos-1{
+        height: 100px;
+    }
+
+     .conteudo-terceario-fotos{
+          display: flex;
+          flex-direction: column;
+          gap: 84px;  
+    }
+
+    .conteudo-terceario-fotos-1{
+        height: 100px;    
+    }
+
+    .rodape{
+        border-top: 0.4px solid #EEFF00; 
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 32px;  /* afasta um pouco o elemento */
+        justify-content: center;    
+    }
+
+  
+
+}
